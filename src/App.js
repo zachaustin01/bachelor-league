@@ -1,10 +1,11 @@
 import './App.css';
 import BasicTable  from './components/teams';
+import MobileNavigation from './Nav';
 
 const capitalizeString = str => str.charAt(0).toUpperCase() + str.slice(1);
 
 function validateLeague(inputString) {
-  return ['chicago','synagogue'].includes(inputString.toLowerCase()) ? inputString : '';
+  return ['crawlers','synagogue'].includes(inputString.toLowerCase()) ? inputString : '';
 }
 
 const params = new URLSearchParams(window.location.search);
@@ -27,6 +28,7 @@ const headerStyle = {
 function App() {
   return (
     <div className="App">
+      {MobileNavigation()}
       <header className='App-header' style={headerStyle}> {capitalizeString(league)} Bachelor League </header>
       <header className="App-header" >
         {BasicTable(league.toLowerCase())}

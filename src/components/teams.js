@@ -21,19 +21,17 @@ function load_data(league){
 
     for (let leader in team_data_reduced) {
         let contestants = team_data_reduced[leader];
-        console.log(contestants)
         let row = {
             "Name": leader,
-            "Contestant1": add_roses(contestants[0], women_data[contestants[0]].roses),
-            "C1_Elim": women_data[contestants[0]].Eliminated,
-            "Contestant2": add_roses(contestants[1], women_data[contestants[1]].roses),
-            "C2_Elim": women_data[contestants[1]].Eliminated,
-            "Contestant3": add_roses(contestants[2], women_data[contestants[2]].roses),
-            "C3_Elim": women_data[contestants[2]].Eliminated
-          };
-        console.log(row)
+        };
+        for(let i = 0; i < contestants.length; i++) {
+          row["Contestant" + (i+1)] = add_roses(contestants[i], women_data[contestants[i]].roses)
+          row["C" + (i+1) + "_Elim"] =  women_data[contestants[i]].Eliminated
+        }
         tableRows.push(row);
     }
+    console.log('Table rows')
+    console.log(tableRows)
 
     function getColorFromBoolean(booleanString) {
       return booleanString.toLowerCase() === 'false' ? 'lightgreen' : '#282C34';
