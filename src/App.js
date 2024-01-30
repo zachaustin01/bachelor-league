@@ -1,39 +1,53 @@
-import './App.css';
-import BasicTable  from './components/teams';
-import MobileNavigation from './Nav';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import MobileNavigation from './MobileNavigation';
+import HomePage from './pages/home';
+import StandingsPage from './pages/standings';
 
-const capitalizeString = str => str.charAt(0).toUpperCase() + str.slice(1);
-
-function validateLeague(inputString) {
-  return ['crawlers','synagogue'].includes(inputString.toLowerCase()) ? inputString : '';
-}
-
-const params = new URLSearchParams(window.location.search);
-let league = ''
-if(params.size === 0){
-  league = prompt('Please enter the name of your league:  ')
-  window.location.href = window.location.href + "?league=" + league;
-} else{
-  league = params.get('league')
-}
-league = validateLeague(league)
-console.log('LEAGUE:')
-console.log(league)
-
-const headerStyle = {
-  fontSize: '100px',
-  color:'pink'
-}
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ff2d55', // Bachelor red
+    },
+    secondary: {
+      main: '#007aff', // Bachelor blue
+    },
+  },
+});
 
 function App() {
+  const [league, setLeague] = useState('');
+
+  useEffect(() => {
+    const storedLeague = localStorage.getItem('league');
+    if (storedLeague) {
+      setLeague(storedLeague);
+    } else {
+      const leaguePrompt = prompt('Please enter the name of your league:');
+      setLeague(leaguePrompt);
+      localStorage.setItem('league', leaguePrompt);
+    }
+  }, []); // Empty dependency array to run only once when component mounts
+
   return (
-    <div className="App">
-      {MobileNavigation()}
-      <header className='App-header' style={headerStyle}> {capitalizeString(league)} Bachelor League </header>
-      <header className="App-header" >
-        {BasicTable(league.toLowerCase())}
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <div>
+          <MobileNavigation />
+          <Routes>
+            <Route
+              path="/"
+              element={<HomePage league={league} />}
+            />
+            <Route
+              path="/standings"
+              element={<StandingsPage league={league} />}
+            />
+          </Routes>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
