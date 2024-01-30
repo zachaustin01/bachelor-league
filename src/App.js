@@ -8,7 +8,14 @@ function validateLeague(inputString) {
 }
 
 const params = new URLSearchParams(window.location.search);
-const league = validateLeague(params.get('league'))
+let league = ''
+if(params.size === 0){
+  league = prompt('Please enter the name of your league:  ')
+  window.location.href = window.location.href + "?league=" + league;
+} else{
+  league = params.get('league')
+}
+league = validateLeague(league)
 console.log('LEAGUE:')
 console.log(league)
 
