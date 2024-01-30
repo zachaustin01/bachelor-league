@@ -7,32 +7,54 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-let team_data = require('../data/teams.json')
-console.log(team_data)
+function load_data(league){
+    let team_data = require('../data/teams.json')
+    let team_data_reduced = team_data[league]
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+    let tableRows = [];
+
+    for (let leader in team_data_reduced) {
+        let contestants = team_data_reduced[leader];
+        let row = {
+            "Name": leader,
+            "Contestant1": contestants[0],
+            "Contestant2": contestants[1],
+            "Contestant3": contestants[2]
+        };
+        tableRows.push(row);
+    }
+
+    function createData(name, contestant1, contestant2, contestant3) {
+    return {name, contestant1, contestant2, contestant3 };
+    }
+
+    const rows = tableRows.map((x) => createData(
+        x["Name"],x["Contestant1"],x["Contestant2"],x["Contestant3"]
+    ));
+    return rows
 }
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
+const header_style = {
+    fontWeight: 'bold',
+    backgroundColor: 'pink',
+    color: '#282C34'
+}
+const tableStyle = {
+    width: '75%',
+    margin: '0 auto'
+  }
 
-export default function BasicTable() {
+export default function BasicTable(league) {
+  const rows = load_data(league)
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} style={tableStyle}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell style={header_style}>Team Name</TableCell>
+            <TableCell style={header_style} align="right">Contestant 1</TableCell>
+            <TableCell style={header_style} align="right">Contestant 2</TableCell>
+            <TableCell style={header_style} align="right">Contestant 3</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -44,10 +66,9 @@ export default function BasicTable() {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{row.contestant1}</TableCell>
+              <TableCell align="right">{row.contestant2}</TableCell>
+              <TableCell align="right">{row.contestant3}</TableCell>
             </TableRow>
           ))}
         </TableBody>
