@@ -1,0 +1,11 @@
+﻿{
+    "crawlers": {
+        "Zach": ["Jenn", "Madina", "Marlena"],
+        "Ethan": ["Kelsey A.", "Rachel", "Edwina"],
+        "Christy": ["Daisy", "Kelsey T.", "Taylor"],
+        "Clare": ["Maria", "Allision", "Jess"],
+        "Janae": ["Lea", "Lauren", "Evalin"],
+        "Nat": ["Lexi", "Katelyn", "Sydney"],
+        "Nicki": ["Autumn", "Chrissa", "Erica"]
+    }
+}
