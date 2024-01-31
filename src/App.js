@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MobileNavigation from './MobileNavigation';
 import HomePage from './pages/home';
 import StandingsPage from './pages/standings';
+import TeamsPage from './pages/teams';
 
 const theme = createTheme({
   palette: {
@@ -34,6 +35,10 @@ function App() {
             <Route
               path="/standings"
               element={<StandingsPage league={league} />}
+            />
+            <Route
+              path="/teams"
+              element={<TeamsPage league={league} />}
             />
           </Routes>
         </div>
