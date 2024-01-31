@@ -1,3 +1,4 @@
+import './App.css'; // Import the CSS file
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -17,18 +18,8 @@ const theme = createTheme({
 });
 
 function App() {
-  const [league, setLeague] = useState('');
 
-  useEffect(() => {
-    const storedLeague = localStorage.getItem('league');
-    if (storedLeague) {
-      setLeague(storedLeague);
-    } else {
-      const leaguePrompt = prompt('Please enter the name of your league:');
-      setLeague(leaguePrompt);
-      localStorage.setItem('league', leaguePrompt);
-    }
-  }, []); // Empty dependency array to run only once when component mounts
+  const league = "crawlers"
 
   return (
     <ThemeProvider theme={theme}>
