@@ -42,3 +42,31 @@ body {
   }
 }
 
+.glow-on-hover {
+  transition: 0.3s;
+}
+
+.glow-on-hover:hover {
+  box-shadow: 0 0 20px #FFC0CB;
+}
+
+.no-bullets {
+  list-style: none; /* Removes default bullet points */
+  list-style-type: none;
+  max-width: 70vw;
+}
+
+.no-bullets li {
+  margin-bottom: 10px; /* Adjust the value as needed */
+  text-indent: 0; /* Reset text indent */
+}
+
+/* Adjust the bullet styling */
+.no-bullets li:before {
+  margin-right: 5px; /* Adjust the spacing between the bullet and the text */
+}
+
+.no-bullets li p {
+  margin: 0; /* Reset paragraph margin */
+  padding-left: 20px; /* Indent second line if text spills over */
+}
