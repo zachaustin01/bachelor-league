@@ -19,7 +19,7 @@ const theme = createTheme({
 
 function App() {
 
-  const league = "crawlers"
+  const league = "dinner Crawlers"
 
   return (
     <ThemeProvider theme={theme}>
