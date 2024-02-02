@@ -73,7 +73,8 @@
     },
     "Sydney": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 2,
+        "first_or_last_rose":1
     },
     "Autumn": {
         "Eliminated": "false",

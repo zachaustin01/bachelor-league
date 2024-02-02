@@ -32,13 +32,14 @@ function get_team_data(league){
 function calculate_contestant_display(contestant_info){
     let disp = ""
     disp = disp + "🌹".repeat(contestant_info["roses"])
+    disp = disp + "👥".repeat(contestant_info["group_date_rose"])
+    disp = disp + "✨".repeat(contestant_info["first_or_last_rose"])
     return(disp)
 }
 
 function calculate_contestant_points(contestant_info){
-    const keys = ["roses","went_home_on_own","group_date_rose","date_rose"]
+    const keys = ["roses","group_date_rose","first_or_last_rose"]
     const sum = keys.reduce((total, key) => total + (contestant_info.hasOwnProperty(key) ? contestant_info[key] : 0), 0);
-
 
     return(sum)
 }
