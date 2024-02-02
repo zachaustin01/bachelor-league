@@ -36,9 +36,11 @@ function calculate_contestant_display(contestant_info){
 }
 
 function calculate_contestant_points(contestant_info){
-    let points = 0
-    points = points + contestant_info["roses"]
-    return(points)
+    const keys = ["roses","went_home_on_own","group_date_rose","date_rose"]
+    const sum = keys.reduce((total, key) => total + (contestant_info.hasOwnProperty(key) ? contestant_info[key] : 0), 0);
+
+
+    return(sum)
 }
 
 function get_team_points(league, team){
