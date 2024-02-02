@@ -11,11 +11,11 @@ class ContestRules extends React.Component {
         '😏 Starts a rumor and receives rose in same episode: (1)',
         '😞 Starts a  rumor and goes home in same episode: (-1)',
         '💪 Starts a rumor about another girl and that girl goes home same episode (1)',
-        '💰 "Steals" Joey from another girl and gets a rose',
-        '🚨 "Steals" Joey from another girl and goes home same episode',
-        '💍 Receives proposal',
-        '👗 Accepts proposal',
-        '😢 Rejects proposal',
+        '💰 "Steals" Joey from another girl and gets a rose (1)',
+        '🚨 "Steals" Joey from another girl and goes home same episode (-1)',
+        '💍 Receives proposal (3)',
+        '👗 Accepts proposal (2)',
+        '😢 Rejects proposal (4)',
     ];
 
       return (
