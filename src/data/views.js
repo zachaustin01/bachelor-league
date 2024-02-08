@@ -38,7 +38,7 @@ function calculate_contestant_display(contestant_info){
 }
 
 function calculate_contestant_points(contestant_info){
-    const keys = ["roses","group_date_rose","first_or_last_rose"]
+    const keys = ["roses","group_date_rose","first_or_last_rose","starts_rumor_stays"]
     const sum = keys.reduce((total, key) => total + (contestant_info.hasOwnProperty(key) ? contestant_info[key] : 0), 0);
 
     return(sum)

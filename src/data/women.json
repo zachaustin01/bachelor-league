@@ -1,11 +1,11 @@
 {
     "Jenn": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 3
     },
     "Madina": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 3
     },
     "Marlena": {
         "Eliminated": "true",
@@ -13,25 +13,26 @@
     },
     "Kelsey A.": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 2,
+        "group_date_rose":1
     },
     "Rachel": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 3
     },
     "Edwina": {
         "Eliminated": "false",
-        "roses": 2,
+        "roses": 3,
         "group_date_rose":1
     },
     "Daisy": {
         "Eliminated": "false",
-        "roses": 2,
+        "roses": 3,
         "date_rose":1
     },
     "Kelsey T.": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 3
     },
     "Taylor": {
         "Eliminated": "true",
@@ -39,20 +40,20 @@
     },
     "Maria": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 3
     },
     "Allision": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 3
     },
     "Jess": {
         "Eliminated": "false",
-        "roses": 2,
+        "roses": 3,
         "group_date_rose":1
     },
     "Lea": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 3
     },
     "Lauren": {
         "Eliminated": "false",
@@ -60,28 +61,31 @@
         "went_home_on_own":-3
     },
     "Evalin": {
-        "Eliminated": "false",
+        "Eliminated": "true",
         "roses": 2
     },
     "Lexi": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 3,
+        "first_or_last_rose":1
     },
     "Katelyn": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 3,
+        "group_date_rose":1
     },
     "Sydney": {
         "Eliminated": "false",
-        "roses": 2,
-        "first_or_last_rose":1
+        "roses": 3,
+        "first_or_last_rose":2,
+        "starts_rumor_stays":1
     },
     "Autumn": {
         "Eliminated": "false",
-        "roses": 2
+        "roses": 3
     },
     "Chrissa": {
-        "Eliminated": "false",
+        "Eliminated": "true",
         "roses": 2
     },
     "Erica": {
@@ -89,7 +93,7 @@
         "roses": 1
     },
     "Starr" : {
-        "Eliminated":"false",
+        "Eliminated":"true",
         "roses":2
     }
 }

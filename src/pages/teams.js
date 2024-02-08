@@ -17,7 +17,7 @@ const header_style = {
     color: '#282C34'
 }
 const tableStyle = {
-    width: '75vw',
+    width: '85vw',
     margin: '0 auto'
   }
 
