@@ -77,6 +77,10 @@
         "roses": 3,
         "first_or_last_rose":1
     },
+    "Kayla":{
+        "Eliminated":"true",
+        "roses":1
+    },
     "Katelyn": {
         "Eliminated": "false",
         "roses": 3,

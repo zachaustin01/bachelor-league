@@ -34,6 +34,22 @@ const RULES ={
     "😭 Makes Joey Cry (1)",
     "🍑 Invited to fantasy suite (1)",
     "🔚 Leaves show voluntarily (-3)"
+  ],
+  "Austin":[
+    '🌹 Rose received: (1)',
+    '✨ First / Last rose in ceremony: (1)',
+    '👥 Group date rose',
+    '😏 Starts a rumor and receives rose in same episode: (1)',
+    '😞 Starts a  rumor and goes home in same episode: (-1)',
+    '💪 Starts a rumor about another girl and that girl goes home same episode (1)',
+    '💰 "Steals" Joey from another girl and gets a rose (1)',
+    '🚨 "Steals" Joey from another girl and goes home same episode (-1)',
+    '💍 Receives proposal (3)',
+    '👗 Accepts proposal (2)',
+    '😢 Rejects proposal (4)',
+    "😭 Makes Joey Cry (1)",
+    "🍑 Invited to fantasy suite (1)",
+    "🔚 Leaves show voluntarily (-3)"
   ]
 }
 
