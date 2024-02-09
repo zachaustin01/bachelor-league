@@ -1,11 +1,18 @@
 ﻿{
-    "night Crawlers": {
+    "Crawlers": {
         "Zach": ["Jenn", "Madina", "Marlena"],
         "Ethan": ["Kelsey A.", "Rachel", "Edwina"],
         "Christy": ["Daisy", "Kelsey T.", "Taylor"],
-        "Clare": ["Maria", "Allision", "Jess"],
+        "Clare": ["Maria", "Allison", "Jess"],
         "Janae": ["Lea", "Lauren", "Evalin"],
         "Nat": ["Lexi", "Katelyn", "Sydney"],
         "Nicki": ["Autumn", "Chrissa", "Erica"]
+    },
+    "Jobby": {
+        "Zach":["Lea","Katelyn","Kelsey T.","Evalin"],
+        "Johnnie":["Maria","Erica","Madina","Starr"],
+        "Abigail":["Kelsey A.","Lexi","Sydney","Nat"],
+        "Pitzy":["Jenn","Rachel","Taylor","Lauren"],
+        "Dan":["Daisy","Jess","Autumn","Allison"]
     }
 }

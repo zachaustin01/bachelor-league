@@ -8,8 +8,8 @@ export function get_player_points(league){
         {
             contestant: v,
             team: key,
-            points: calculate_contestant_points(women_data[v]),
-            display: calculate_contestant_display(women_data[v])
+            points: calculate_contestant_points(women_data,v),
+            display: calculate_contestant_display(women_data,v)
         }
     )));
     return listOfDictionaries.sort((a,b)=>b.points - a.points)
@@ -17,6 +17,8 @@ export function get_player_points(league){
 
 export default function get_league_standings(league){
     const teams = get_team_data(league)
+    console.log('TEAMS')
+    console.log(teams)
     const listOfDicts = Object.entries(teams).map(([outerKey, innerDict]) => ({
         team: outerKey,
         total_points: get_team_points(league, outerKey)
@@ -29,17 +31,27 @@ function get_team_data(league){
     return team_data_reduced
 }
 
-function calculate_contestant_display(contestant_info){
+function calculate_contestant_display(contestant_info, v){
+    console.log(v)
+    let ci = contestant_info[v]
     let disp = ""
-    disp = disp + "🌹".repeat(contestant_info["roses"])
-    disp = disp + "👥".repeat(contestant_info["group_date_rose"])
-    disp = disp + "✨".repeat(contestant_info["first_or_last_rose"])
+    disp = disp + "🌹".repeat(ci["roses"])
+    disp = disp + "👥".repeat(ci["group_date_rose"])
+    disp = disp + "✨".repeat(ci["first_or_last_rose"])
+    disp = disp + "💪".repeat(ci["starts_rumor_stays"])
     return(disp)
 }
 
-function calculate_contestant_points(contestant_info){
+function calculate_contestant_points(contestant_info, v){
+    console.log('NAME')
+    console.log(v)
+    let ci = contestant_info[v]
+    console.log('Calculating points')
     const keys = ["roses","group_date_rose","first_or_last_rose","starts_rumor_stays"]
-    const sum = keys.reduce((total, key) => total + (contestant_info.hasOwnProperty(key) ? contestant_info[key] : 0), 0);
+    console.log('Contestant info')
+    console.log(Object.keys(contestant_info))
+    console.log(ci)
+    const sum = keys.reduce((total, key) => total + (ci.hasOwnProperty(key) ? ci[key] : 0), 0);
 
     return(sum)
 }
@@ -47,9 +59,10 @@ function calculate_contestant_points(contestant_info){
 function get_team_points(league, team){
     const tdr = get_team_data(league)
     const roster = tdr[team]
+    console.log(roster)
     const sum = roster.reduce((acc, key) => acc +
         calculate_contestant_points(
-            women_data[key]
+            women_data, key
         ), 0);
     return sum
 }
