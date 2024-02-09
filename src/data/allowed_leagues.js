@@ -1,1 +1,1 @@
-export const allowedLeagues = ['Crawlers', "Abigails Bachelors"];
+export const allowedLeagues = ['Crawlers', "Abigails Bachelors", "Austin"];

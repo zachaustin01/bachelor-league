@@ -12,7 +12,8 @@ const key_emojis = {
 
 const league_keys = {
     "Crawlers":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays"],
-    "Abigails Bachelors":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","went_home_on_own"]
+    "Abigails Bachelors":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","went_home_on_own"],
+    "Austin":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","went_home_on_own"]
 }
 
 export function get_player_points(league){
