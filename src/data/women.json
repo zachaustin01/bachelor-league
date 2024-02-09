@@ -1,4 +1,12 @@
 {
+    "Starr": {
+        "Eliminated":"true",
+        "roses":2
+    },
+    "Nat": {
+        "Eliminated":"false",
+        "roses":3
+    },
     "Jenn": {
         "Eliminated": "false",
         "roses": 3
@@ -42,7 +50,7 @@
         "Eliminated": "false",
         "roses": 3
     },
-    "Allision": {
+    "Allison": {
         "Eliminated": "false",
         "roses": 3
     },
@@ -91,9 +99,5 @@
     "Erica": {
         "Eliminated": "true",
         "roses": 1
-    },
-    "Starr" : {
-        "Eliminated":"true",
-        "roses":2
     }
 }
