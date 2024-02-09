@@ -19,7 +19,7 @@ const RULES ={
     '👗 Accepts proposal (2)',
     '😢 Rejects proposal (4)'
   ],
-  "Jobby":[
+  "Abigail's Bachelors":[
     '🌹 Rose received: (1)',
     '✨ First / Last rose in ceremony: (1)',
     '👥 Group date rose',
