@@ -1,6 +1,9 @@
 // HomePage.js
 
-import React from 'react';
+import React, { useState } from 'react';
+import { useLeague } from '../leagueContext';
+
+import { allowedLeagues } from '../data/allowed_leagues';
 
 class ContestRules extends React.Component {
     render() {
@@ -15,7 +18,7 @@ class ContestRules extends React.Component {
         '🚨 "Steals" Joey from another girl and goes home same episode (-1)',
         '💍 Receives proposal (3)',
         '👗 Accepts proposal (2)',
-        '😢 Rejects proposal (4)',
+        '😢 Rejects proposal (4)'
     ];
 
       return (
@@ -30,14 +33,44 @@ class ContestRules extends React.Component {
     }
   }
 
-function HomePage(league) {
-    console.log(league)
+function HomePage() {
+  const { leagueName, setLeagueName } = useLeague();
+  const [inputLeagueName, setInputLeagueName] = useState('');
+  const [error, setError] = useState('');
+
+
+  const handleLeagueNameSubmit = () => {
+    if (allowedLeagues.includes(inputLeagueName)) {
+      setLeagueName(inputLeagueName);
+      setInputLeagueName('');
+      setError('');
+    } else {
+      setError('Please enter a valid league name.');
+    }
+  };
+
+  if (!leagueName) {
     return (
-        <div>
-        <h1>Contest Rules</h1>
-        <ContestRules/>
-        </div>
+      <div>
+        <h1>Welcome to the App</h1>
+        <input
+          type="text"
+          value={inputLeagueName}
+          onChange={(e) => setInputLeagueName(e.target.value)}
+          placeholder="Enter League Name"
+        />
+        <button onClick={handleLeagueNameSubmit}>Submit</button>
+        {error && <p>{error}</p>}
+      </div>
     );
+  }
+
+  return (
+      <div>
+      <h1>Contest Rules</h1>
+      <ContestRules/>
+      </div>
+  );
 }
 
 export default HomePage;

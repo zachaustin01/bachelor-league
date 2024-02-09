@@ -7,6 +7,9 @@ import HomePage from './pages/home';
 import StandingsPage from './pages/standings';
 import TeamsPage from './pages/teams';
 
+import { LeagueProvider } from './leagueContext';
+
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -20,28 +23,28 @@ const theme = createTheme({
 
 function App() {
 
-  const league = "night Crawlers"
-
   return (
     <ThemeProvider theme={theme}>
       <Router>
+        <LeagueProvider>
         <div>
           <MobileNavigation />
           <Routes>
             <Route
               path="/"
-              element={<HomePage league={league} />}
+              element={<HomePage/>}
             />
             <Route
               path="/standings"
-              element={<StandingsPage league={league} />}
+              element={<StandingsPage/>}
             />
             <Route
               path="/teams"
-              element={<TeamsPage league={league} />}
+              element={<TeamsPage/>}
             />
           </Routes>
         </div>
+        </LeagueProvider>
       </Router>
     </ThemeProvider>
   );

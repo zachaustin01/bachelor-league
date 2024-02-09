@@ -1,6 +1,6 @@
 // Teams.js
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -10,6 +10,10 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 import { get_player_points } from "../data/views";
+
+import { useLeague } from '../leagueContext';
+import { useNavigate } from 'react-router-dom';
+import { allowedLeagues } from '../data/allowed_leagues';
 
 const header_style = {
     fontWeight: 'bold',
@@ -21,7 +25,25 @@ const tableStyle = {
     margin: '0 auto'
   }
 
-function TeamsPage(league) {
+function TeamsPage() {
+
+    const { leagueName } = useLeague();
+    const navigate = useNavigate();
+    let league = leagueName;
+    console.log('LEAGUE')
+    console.log(league)
+
+    // Check if the leagueName is not set or not included in the allowedLeagues array
+    useEffect(() => {
+        // Check if the leagueName is not set or not included in the allowedLeagues array
+        if (!leagueName || !allowedLeagues.includes(leagueName)) {
+          navigate('/');
+        }
+      }, [leagueName, navigate]);
+
+    if (!leagueName || !allowedLeagues.includes(leagueName)) {
+    return null; // You can also return a loading indicator or message here if needed
+    }
 
     const contestants = get_player_points(league)
     const rows = contestants

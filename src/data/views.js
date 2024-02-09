@@ -25,7 +25,7 @@ export default function get_league_standings(league){
 }
 
 function get_team_data(league){
-    const team_data_reduced = team_data[league.league]
+    const team_data_reduced = team_data[league]
     return team_data_reduced
 }
 
