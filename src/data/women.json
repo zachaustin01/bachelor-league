@@ -4,16 +4,16 @@
         "roses":2
     },
     "Nat": {
-        "Eliminated":"false",
-        "roses":3
+        "Eliminated":"true",
+        "roses":1
     },
     "Jenn": {
         "Eliminated": "false",
-        "roses": 3
+        "roses": 6
     },
     "Madina": {
-        "Eliminated": "false",
-        "roses": 3
+        "Eliminated": "true",
+        "roses": 4
     },
     "Marlena": {
         "Eliminated": "true",
@@ -21,26 +21,26 @@
     },
     "Kelsey A.": {
         "Eliminated": "false",
-        "roses": 2,
+        "roses": 6,
         "group_date_rose":1
     },
     "Rachel": {
         "Eliminated": "false",
-        "roses": 3
+        "roses": 6
     },
     "Edwina": {
-        "Eliminated": "false",
+        "Eliminated": "true",
         "roses": 3,
         "group_date_rose":1
     },
     "Daisy": {
         "Eliminated": "false",
-        "roses": 3,
+        "roses": 6,
         "date_rose":1
     },
     "Kelsey T.": {
         "Eliminated": "false",
-        "roses": 3
+        "roses": 6
     },
     "Taylor": {
         "Eliminated": "true",
@@ -48,20 +48,20 @@
     },
     "Maria": {
         "Eliminated": "false",
-        "roses": 3
+        "roses": 6
     },
     "Allison": {
-        "Eliminated": "false",
+        "Eliminated": "true",
         "roses": 3
     },
     "Jess": {
-        "Eliminated": "false",
-        "roses": 3,
+        "Eliminated": "true",
+        "roses": 5,
         "group_date_rose":1
     },
     "Lea": {
-        "Eliminated": "false",
-        "roses": 3
+        "Eliminated": "true",
+        "roses": 5
     },
     "Lauren": {
         "Eliminated": "false",
@@ -73,28 +73,30 @@
         "roses": 2
     },
     "Lexi": {
-        "Eliminated": "false",
-        "roses": 3,
-        "first_or_last_rose":1
+        "Eliminated": "true",
+        "roses": 5,
+        "first_or_last_rose":1,
+        "went_home_on_own":-3
     },
     "Kayla":{
         "Eliminated":"true",
         "roses":1
     },
     "Katelyn": {
-        "Eliminated": "false",
-        "roses": 3,
+        "Eliminated": "true",
+        "roses": 5,
         "group_date_rose":1
     },
     "Sydney": {
-        "Eliminated": "false",
+        "Eliminated": "true",
         "roses": 3,
         "first_or_last_rose":2,
-        "starts_rumor_stays":1
+        "starts_rumor_stays":1,
+        "starts_rumor_gos":-1
     },
     "Autumn": {
-        "Eliminated": "false",
-        "roses": 3
+        "Eliminated": "true",
+        "roses": 4
     },
     "Chrissa": {
         "Eliminated": "true",
