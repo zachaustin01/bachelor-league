@@ -9,7 +9,9 @@
     },
     "Jenn": {
         "Eliminated": "false",
-        "roses": 6
+        "roses": 6,
+        "group_date_rose":1,
+        "first_or_last_rose":1
     },
     "Madina": {
         "Eliminated": "true",
@@ -22,11 +24,13 @@
     "Kelsey A.": {
         "Eliminated": "false",
         "roses": 6,
-        "group_date_rose":1
+        "group_date_rose":1,
+        "first_or_last_rose":1
     },
     "Rachel": {
         "Eliminated": "false",
-        "roses": 6
+        "roses": 6,
+        "first_or_last_rose":1
     },
     "Edwina": {
         "Eliminated": "true",
@@ -36,11 +40,13 @@
     "Daisy": {
         "Eliminated": "false",
         "roses": 6,
-        "date_rose":1
+        "date_rose":1,
+        "first_or_last_rose":1
     },
     "Kelsey T.": {
         "Eliminated": "false",
-        "roses": 6
+        "roses": 6,
+        "group_date_rose":1
     },
     "Taylor": {
         "Eliminated": "true",
@@ -48,7 +54,8 @@
     },
     "Maria": {
         "Eliminated": "false",
-        "roses": 6
+        "roses": 6,
+        "group_date_rose":2
     },
     "Allison": {
         "Eliminated": "true",
@@ -57,11 +64,13 @@
     "Jess": {
         "Eliminated": "true",
         "roses": 5,
-        "group_date_rose":1
+        "group_date_rose":1,
+        "first_or_last_rose":1
     },
     "Lea": {
         "Eliminated": "true",
-        "roses": 5
+        "roses": 5,
+        "first_or_last_rose":1
     },
     "Lauren": {
         "Eliminated": "false",
