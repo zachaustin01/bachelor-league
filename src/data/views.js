@@ -6,14 +6,15 @@ const key_emojis = {
     "roses":"🌹",
     "group_date_rose":"👥",
     "first_or_last_rose":"✨",
-    "starts_rumor_stays":"💪",
-    "went_home_on_own":"🔚"
+    "starts_rumor_stays":"😏",
+    "went_home_on_own":"🔚",
+    "starts_rumor_gos":"😞"
 }
 
 const league_keys = {
-    "Crawlers":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays"],
-    "Abigails Bachelors":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","went_home_on_own"],
-    "Austin":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","went_home_on_own"]
+    "Crawlers":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","starts_rumor_gos"],
+    "Abigails Bachelors":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","starts_rumor_gos","went_home_on_own"],
+    "Austin":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","starts_rumor_gos","went_home_on_own"]
 }
 
 export function get_player_points(league){
