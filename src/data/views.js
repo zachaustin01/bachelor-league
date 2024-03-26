@@ -8,12 +8,13 @@ const key_emojis = {
     "first_or_last_rose":"✨",
     "starts_rumor_stays":"😏",
     "went_home_on_own":"🔚",
-    "starts_rumor_gos":"😞"
+    "starts_rumor_gos":"😞",
+    "sleeps_with":"😏"
 }
 
 const league_keys = {
     "Crawlers":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","starts_rumor_gos"],
-    "Abigails Bachelors":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","starts_rumor_gos","went_home_on_own"],
+    "Abigails Bachelors":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","starts_rumor_gos","went_home_on_own","sleeps_with"],
     "Austin":["roses","group_date_rose","first_or_last_rose","starts_rumor_stays","starts_rumor_gos","went_home_on_own"]
 }
 
